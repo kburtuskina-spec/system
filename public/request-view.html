@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Просмотр заявки</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h3>ПНП Вектор-а</h3>
+
+    <a href="index.html">Главная</a>
+    <a href="requests.html">Заявки</a>
+    <a href="objects.html">Объекты</a>
+    <a href="materials.html">Материалы</a>
+    <a href="users.html">Пользователи</a>
+    <a href="reports.html">Отчеты</a>
+
+</div>
+
+<div class="content">
+
+    <div class="page-header">
+
+        <div>
+
+            <div
+id="breadcrumbs"
+style="color:#6b7280;">
+Загрузка...
+</div>
+
+
+            <h1 id="requestTitle">
+                Загрузка...
+            </h1>
+
+        </div>
+
+        <button
+            id="editBtn"
+            class="btn-edit-request">
+
+            Редактировать
+
+        </button>
+        <button
+class="btn-delete-request secondary"
+style="margin-left:10px;">
+Удалить
+</button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Основная информация</h3>
+
+        <div
+            style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:18px;
+        ">
+
+            <div>
+
+                <label>Дата создания</label>
+
+                <div id="createdAt">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Срок выполнения</label>
+
+                <div id="dueDate">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Объект</label>
+
+                <div id="objectName">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Статус</label>
+
+                <div id="status">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Ответственный</label>
+
+                <div id="requester">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Подразделение</label>
+
+                <div id="department">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Материал</label>
+
+                <div id="item">-</div>
+
+            </div>
+
+            <div>
+
+                <label>Количество</label>
+
+                <div id="quantity">-</div>
+
+            </div>
+
+            <div
+                style="
+                grid-column:1 / span 2;
+            ">
+
+                <label>Комментарий</label>
+
+                <div id="description">-</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/request-view.js"></script>
+
+</body>
+</html>

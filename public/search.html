@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Поиск заявок</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h3>ПНП Вектор-а</h3>
+
+  <a href="index.html">Главная</a>
+  <a href="requests.html">Заявки</a>
+  <a href="objects.html">Объекты</a>
+  <a href="materials.html">Материалы</a>
+  <a href="users.html">Пользователи</a>
+  <a href="reports.html">Отчеты</a>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <h1>Поиск заявок</h1>
+
+  <!-- FILTER CARD -->
+  <div class="card">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+
+      <div>
+        <label>Номер заявки</label>
+        <input placeholder="Введите номер">
+      </div>
+
+      <div>
+        <label>Статус</label>
+        <select>
+          <option>Выберите статус</option>
+          <option>В работе</option>
+          <option>Выполнено</option>
+          <option>Просрочено</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Объект</label>
+        <select>
+          <option>Выберите объект</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Период создания</label>
+        <input type="date">
+      </div>
+
+      <div>
+        <label>—</label>
+        <input type="date">
+      </div>
+
+      <div>
+        <label>Ответственный</label>
+        <select>
+          <option>Выберите ответственного</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div style="display:flex;gap:10px;margin-top:16px;">
+      <button class="btn-search">Найти</button>
+      <button class="btn-clear secondary">Очистить</button>
+    </div>
+
+  </div>
+
+  <!-- TABLE -->
+  <div class="card" style="margin-top:16px;">
+
+    <table>
+      <thead>
+        <tr>
+          <th>№ заявки</th>
+          <th>Дата</th>
+          <th>Объект</th>
+          <th>Ответственный</th>
+          <th>Статус</th>
+          <th>Срок исполнения</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>3-2024-0128</td>
+          <td>22.05.2024</td>
+          <td>ЖК «Новый город»</td>
+          <td>Петров П.П.</td>
+          <td>В работе</td>
+          <td>25.05.2024</td>
+        </tr>
+
+        <tr>
+          <td>3-2024-0127</td>
+          <td>21.05.2024</td>
+          <td>ТРЦ «Солнечный»</td>
+          <td>Иванов И.И.</td>
+          <td>В работе</td>
+          <td>24.05.2024</td>
+        </tr>
+
+        <tr>
+          <td>3-2024-0126</td>
+          <td>20.05.2024</td>
+          <td>Складской комплекс</td>
+          <td>Сидоров С.С.</td>
+          <td>Выполнено</td>
+          <td>22.05.2024</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <!-- PAGINATION -->
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;color:#6b7280;">
+    
+    <div>
+      Показано:
+      <select style="padding:6px;border-radius:8px;">
+        <option>10</option>
+        <option>20</option>
+      </select>
+    </div>
+
+    <div style="display:flex;gap:8px;">
+      <button class="secondary">‹</button>
+      <button style="background:#2563eb;color:white;">1</button>
+      <button class="secondary">2</button>
+      <button class="secondary">›</button>
+    </div>
+
+  </div>
+
+</div>
+<script src="client.js"></script>
+</body>
+</html>

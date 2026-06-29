@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Редактирование пользователя</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h3>ПНП Вектор-а</h3>
+
+    <a href="index.html">Главная</a>
+    <a href="requests.html">Заявки</a>
+    <a href="objects.html">Объекты</a>
+    <a href="materials.html">Материалы</a>
+    <a href="users.html">Пользователи</a>
+    <a href="reports.html">Отчеты</a>
+
+</div>
+
+<div class="content">
+
+    <h1>Редактирование пользователя</h1>
+
+    <div class="card">
+
+        <div class="form-group">
+            <label>Логин</label>
+            <input id="login">
+        </div>
+
+        <div class="form-group">
+            <label>ФИО</label>
+            <input id="fullName">
+        </div>
+
+        <div class="form-group">
+            <label>Роль</label>
+
+            <select id="role">
+                <option value="Пользователь">Пользователь</option>
+                <option value="Сотрудник снабжения">Сотрудник снабжения</option>
+                <option value="Администратор системы">Администратор системы</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label>Подразделение</label>
+            <input id="department">
+        </div>
+
+        <button id="saveBtn">
+            Сохранить
+        </button>
+
+        <button
+            class="secondary"
+            onclick="location.href='users.html'">
+            Отмена
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/user-edit.js"></script>
+
+</body>
+</html>

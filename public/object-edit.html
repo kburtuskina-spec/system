@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Редактирование объекта</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h3>ПНП Вектор-а</h3>
+
+    <a href="index.html">Главная</a>
+    <a href="requests.html">Заявки</a>
+    <a href="objects.html">Объекты</a>
+    <a href="materials.html">Материалы</a>
+    <a href="users.html">Пользователи</a>
+    <a href="reports.html">Отчеты</a>
+
+</div>
+
+<div class="content">
+
+    <h1>Редактирование объекта</h1>
+    <div class="card">
+
+        <div class="form-group">
+    <label>Код объекта</label>
+    <input id="code">
+</div>
+
+<div class="form-group">
+    <label>Наименование</label>
+    <input id="name">
+</div>
+
+<div class="form-group">
+    <label>Адрес</label>
+    <input id="address">
+</div>
+
+<div class="form-group">
+    <label>Заказчик</label>
+    <input id="customer">
+</div>
+
+<div class="form-group">
+    <label>Статус</label>
+
+    <select id="status">
+        <option value="Активный">Активный</option>
+        <option value="Неактивный">Неактивный</option>
+    </select>
+</div>
+
+        <button id="saveBtn">
+            Сохранить
+        </button>
+
+        <button
+            class="secondary"
+            onclick="location.href='objects.html'">
+            Отмена
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/object-edit.js"></script>
+
+</body>
+</html>

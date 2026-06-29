@@ -1,0 +1,163 @@
+<div class="container"></div>
+<link rel="stylesheet" href="styles.css">
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>ПНП Вектор-а | Учет заявок</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h3>ПНП Вектор-а</h3>
+
+    <a href="index.html" id="menu-dashboard">Главная</a>
+<a href="requests.html" id="menu-requests">Заявки</a>
+<a href="objects.html" id="menu-objects">Объекты</a>
+<a href="materials.html" id="menu-materials">Материалы</a>
+<a href="users.html" id="menu-users">Пользователи</a>
+<a href="reports.html" id="menu-reports">Отчеты</a>
+
+</div>
+<!-- CONTENT -->
+<div class="content">
+
+    <div class="page-header">
+
+        <h1>Главная</h1>
+
+        <div class="user-panel">
+
+            <span id="currentUser"></span>
+
+            <button id="logoutBtn">
+                Выйти
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- KPI -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div>Всего заявок</div>
+
+            <h2 id="totalRequests">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <div>В работе</div>
+
+            <h2 id="inWorkRequests">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <div>Выполнено</div>
+
+            <h2 id="completedRequests">0</h2>
+
+        </div>
+
+        <div class="card">
+
+            <div>Просрочено</div>
+
+            <h2 id="overdueRequests">0</h2>
+
+        </div>
+
+    </div>
+
+    <!-- Основной блок -->
+
+    <div
+        style="
+            display:grid;
+            grid-template-columns:2fr 1fr;
+            gap:16px;
+        ">
+
+        <!-- Таблица -->
+
+        <div>
+
+            <div class="card">
+
+                <h3>Последние заявки</h3>
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>№</th>
+
+                        <th>Объект</th>
+
+                        <th>Статус</th>
+
+                        <th>Срок</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="latestRequests">
+
+</tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Правая колонка -->
+
+        <div>
+
+            
+            <div
+                class="card"
+                style="margin-top:16px;">
+
+                <h3>Уведомления</h3>
+
+                <div
+    id="notifications"
+    style="
+        font-size:13px;
+        color:#6b7280;
+    ">
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

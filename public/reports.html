@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчёты</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">ПНП Вектор-а</div>
+
+        <a href="index.html">Главная</a>
+        <a href="requests.html">Заявки</a>
+        <a href="objects.html">Объекты</a>
+        <a href="materials.html">Материалы</a>
+        <a href="users.html">Пользователи</a>
+        <a class="active" href="reports.html">Отчёты</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="header">
+            <h1>Отчёты</h1>
+        </div>
+
+        <!-- TOP CARDS -->
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-title">Объекты</div>
+                <div class="card-value" id="objectsCount">0</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Заявки</div>
+                <div class="card-value" id="requestsCount">0</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Активные заявки</div>
+                <div class="card-value" id="activeRequests">0</div>
+            </div>
+
+        </div>
+
+        <!-- TABLE BLOCK -->
+        <div class="table-block">
+
+            <h3>Последние заявки</h3>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Объект</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+
+                <tbody id="lastRequests"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="js/reports.js"></script>
+
+</body>
+</html>

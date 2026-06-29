@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Материалы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h3>ПНП Вектор-а</h3>
+
+  <a href="index.html">Главная</a>
+  <a href="requests.html">Заявки</a>
+  <a href="objects.html">Объекты</a>
+  <a href="materials.html">Материалы</a>
+  <a href="users.html">Пользователи</a>
+  <a href="reports.html">Отчеты</a>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- HEADER -->
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <h1>Материалы</h1>
+
+    <button class="btn-new-material">+ Новый материал</button>
+  </div>
+
+  <!-- SEARCH -->
+  <div style="display:flex;gap:10px;margin:16px 0;">
+   <input
+    id="searchInput"
+    placeholder="Поиск по материалам..."
+    style="flex:1;">
+    <button id="searchBtn">
+    Поиск
+</button>
+  </div>
+
+  <!-- TABLE -->
+ <table id="materialsTable">
+    <thead>
+      <tr>
+        <th>Код материала</th>
+        <th>Наименование</th>
+        <th>Ед. изм.</th>
+        <th>Категория</th>
+        <th>Остаток на складе</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+
+    <tbody id="materialsBody">
+
+</tbody>
+
+  </table>
+
+</div>
+<script src="js/common.js"></script>
+<script src="js/materials.js"></script>
+</body>
+</html>

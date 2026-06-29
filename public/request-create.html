@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Новая заявка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h3>ПНП Вектор-а</h3>
+
+  <a href="index.html">Главная</a>
+  <a href="requests.html">Заявки</a>
+  <a href="objects.html">Объекты</a>
+  <a href="materials.html">Материалы</a>
+  <a href="users.html">Пользователи</a>
+  <a href="reports.html">Отчеты</a>
+</div>
+
+<div class="content">
+
+<h1>Новая заявка</h1>
+
+<div style="color:#6b7280;margin-bottom:16px;">
+Заявки / Новая заявка
+</div>
+
+<form id="form">
+
+<div class="card">
+
+<h3>Основная информация</h3>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+<div>
+<label>Дата создания</label>
+<input
+type="date"
+name="created_at"
+value=""
+readonly
+>
+</div>
+
+<div>
+<label>Срок выполнения</label>
+<input
+type="date"
+name="due_date"
+required
+>
+</div>
+
+<div>
+<label>Объект</label>
+<select name="object_id">
+<option value="">Выберите объект</option>
+</select>
+</div>
+
+<div>
+<label>Статус</label>
+<input
+type="text"
+name="status"
+value="Создана"
+readonly
+>
+</div>
+
+<div>
+<label>Ответственный</label>
+<input
+type="text"
+name="requester"
+readonly
+>
+</div>
+
+<div>
+<label>Подразделение</label>
+<input
+type="text"
+name="department"
+readonly
+>
+</div>
+
+<div>
+<label>Материал</label>
+
+<select name="item" required>
+
+<option value="">
+Выберите материал
+</option>
+
+</select>
+</div>
+
+<div>
+<label>Количество</label>
+<input
+type="number"
+name="quantity"
+value="1"
+min="1"
+step="1"
+required
+>
+</div>
+
+
+<div>
+<label>Комментарий</label>
+<input
+type="text"
+name="description"
+placeholder="Введите комментарий"
+>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div style="display:flex;gap:10px;margin-top:16px;">
+
+<button
+type="submit"
+class="btn-save-request">
+Сохранить
+</button>
+
+<button
+type="button"
+class="btn-cancel secondary">
+Отмена
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script>
+document.querySelector("[name=created_at]").value =
+new Date().toISOString().split("T")[0];
+</script>
+
+<script src="js/common.js"></script>
+<script src="js/request-create.js"></script>
+
+</body>
+</html>

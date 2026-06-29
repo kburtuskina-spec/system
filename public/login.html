@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Авторизация</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-container">
+
+    <h1>ПНП «Вектор-А»</h1>
+
+    <p class="subtitle">
+        Система учета заявок на материалы и оборудование
+    </p>
+
+    <form id="loginForm">
+
+        <div class="form-group">
+
+            <label>Логин</label>
+
+            <input
+                type="text"
+                id="login"
+                placeholder="Введите логин"
+                required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Пароль</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                required>
+
+        </div>
+
+        <button type="submit">
+            Войти
+        </button>
+
+    </form>
+
+    <p
+        id="errorMessage"
+        class="error-message">
+    </p>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+
+</html>
