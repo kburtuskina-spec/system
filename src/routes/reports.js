@@ -2,31 +2,6 @@ const express = require('express');
 const db = require('../db');
 
 const router = express.Router();
-document.addEventListener("DOMContentLoaded", load);
-
-async function load() {
-
-    const res = await fetch('/api/reports');
-    const data = await res.json();
-
-    document.getElementById("objectsCount").innerText = data.objectsCount;
-    document.getElementById("requestsCount").innerText = data.requestsCount;
-    document.getElementById("activeRequests").innerText = data.activeRequests;
-
-    const tbody = document.getElementById("lastRequests");
-    tbody.innerHTML = "";
-
-    data.lastRequests.forEach(r => {
-
-        tbody.innerHTML += `
-<tr>
-<td>${r.id}</td>
-<td>${r.object_name ?? '-'}</td>
-<td>${r.status}</td>
-</tr>
-        `;
-    });
-}
 
 router.get('/', async (req, res) => {
 
